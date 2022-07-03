@@ -10,6 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use(middleware.consoleData);
+app.use(middleware.processToken);
 
 app.use("/mascotas", mascotasController);
 app.use("/login", loginController);
