@@ -1,0 +1,12 @@
+//muestra todas las entradas
+GET http://localhost:8000/mascotas
+Content-Type: application/json
+
+### 
+//muestra una entrada según id
+GET http://localhost:8000/mascotas/1
+Content-Type: application/json
+
+###
+//borra 1 elemento
+DELETE http://localhost:8000/mascotas/2
