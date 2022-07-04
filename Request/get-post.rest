@@ -1,5 +1,11 @@
-//muestra todas las entradas
+//muestra todas las entradas de mascotas
 GET http://localhost:8000/mascotas
+Content-Type: application/json
+
+
+### 
+//muestra todos los refugios
+GET http://localhost:8000/usuarios-refugios
 Content-Type: application/json
 
 ### 

@@ -8,11 +8,17 @@ Content-Type: application/json
 }
 
 ###
-POST http://localhost:8000/objeto
+POST http://localhost:8000/mascotas
 Content-Type: application/json
 Authorization: Bearer {{ login.response.body.token }}
 
 {
-  "title" : "primer post",
-  "content" : "mucho bla bla bla"
+  "nombre": "Lola",
+    "raza": "gato",
+    "edad": 11,
+    "tamaño": "mediano",
+    "zona": "Flores",
+    "especial": false,
+    "sexo": "F",
+    "compatibilidad": "ninguno"
 }
