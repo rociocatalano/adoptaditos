@@ -1,9 +1,12 @@
+const jwt = require("jsonwebtoken");
 require('dotenv').config();
 
 const consoleData = (req, res, next) => {
     console.log("Method:" + req.method);
     console.log("Path:" + req.path);
     console.log("Body:", req.body);
+    console.log("Params:", req.params);
+    console.log("Query:", req.query);
     console.log("------");
     next();
 };
@@ -14,7 +17,7 @@ const unknownEndpoint = (req, res) => {
 
 const processToken = (req, res, next) => {
     const authorization = req.get('authorization');
-    if (authorization && authorization.toLowerCase().startsWith('bearer')) {
+    if (authorization && authorization.toLowerCase().startsWith('bearer ')) {
         req.token = authorization.substring(7);
     } else {
         req.token = null;
@@ -31,4 +34,4 @@ const validarUserLogin = (req, res, next) => {
     next();
 }
 
-module.exports = { consoleData, unknownEndpoint, processToken };
+module.exports = { consoleData, unknownEndpoint, processToken, validarUserLogin };
