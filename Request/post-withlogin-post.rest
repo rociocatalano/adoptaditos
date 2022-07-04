@@ -1,0 +1,18 @@
+# @name login
+POST http://localhost:8000/login
+Content-Type: application/json
+
+{
+  "username":"refugio",
+  "password":"123456"
+}
+
+###
+POST http://localhost:8000/objeto
+Content-Type: application/json
+Authorization: Bearer {{ login.response.body.token }}
+
+{
+  "title" : "primer post",
+  "content" : "mucho bla bla bla"
+}

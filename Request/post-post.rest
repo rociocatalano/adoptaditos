@@ -1,0 +1,13 @@
+POST http://localhost:8000/mascotas
+Content-Type: application/json 
+
+{
+    "nombre": "Lola",
+    "raza": "gato",
+    "edad": 11,
+    "tamaño": "mediano",
+    "zona": "Flores",
+    "especial": true,
+    "sexo": "F",
+    "compatibilidad": "ninguno"
+}
