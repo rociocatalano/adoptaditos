@@ -1,4 +1,5 @@
 const { v4: uuidv4 } = require("uuid");
+const middleware = require('../utils/middleware');
 
 const router = require("express").Router();
 let { Mascotas } = require("../dataccess/mascotas");
