@@ -48,7 +48,28 @@ const getAll = (filter) => {
     let filtrado = Mascotas;
 
     if (filter.compatibilidad) {
-        filtrado = filtrado.filter(e => e.compatibilidad === filter.compatibilidad)
+        filtrado = filtrado.filter(e => e.compatibilidad === filter.compatibilidad);
+    }
+    if (filter.tamaño) {
+        filtrado = filtrado.filter(e => e.tamaño === filter.tamaño);
+    }
+    if (filter.raza) {
+        filtrado = filtrado.filter(e => e.raza === filter.raza);
+    }
+    if (filter.edad) {
+        filtrado = filtrado.filter(e => e.edad === filter.edad);
+    }
+    if (filter.zona) {
+        filtrado = filtrado.filter(e => e.zona === filter.zona);
+    }
+    if (filter.especial) {
+        filtrado = filtrado.filter(e => e.especial === filter.especial);
+    }
+    if (filter.sexo) {
+        filtrado = filtrado.filter(e => e.sexo === filter.sexo);
+    }
+    if (filter.nombre) {
+        filtrado = filtrado.filter(e => e.nombre === filter.nombre);
     }
     return filtrado
 }
