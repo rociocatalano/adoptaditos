@@ -1,3 +1,4 @@
+//post nueva entrada: mascota
 POST http://localhost:8000/mascotas
 Content-Type: application/json 
 
@@ -10,4 +11,15 @@ Content-Type: application/json
     "especial": true,
     "sexo": "F",
     "compatibilidad": "ninguno"
+}
+
+###
+PUT http://localhost:8000/mascotas/1
+Content-Type: application/json
+
+{
+    "nombre": "Morgan",
+    "raza": "loro",
+    "edad": 8
+
 }

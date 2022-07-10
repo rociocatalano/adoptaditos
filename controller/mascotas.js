@@ -42,7 +42,7 @@ router.post("/", middleware.validarUserLogin, (req, res) => {
 });
 
 
-/* Borrar una mascota */
+/* Borrar una mascota sin usuario logeado*/
 
 router.delete("/:id", (req, res) => {
     const id = req.params.id;
@@ -56,12 +56,14 @@ router.delete("/:id", (req, res) => {
     }
 });
 
+
+
 /* Modificar una mascota */
 
 router.put("/:id", (req, res) => {
     const id = req.params.id;
     //const index = Mascotas.findIndex((mascotas) => mascotas.id == id);
-    if (dao.modificar(id, req.body)) {
+    if (dao.modificar(id, req)) {
         res.sendStatus(202);
     } else {
         res.sendStatus(404);

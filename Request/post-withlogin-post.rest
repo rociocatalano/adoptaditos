@@ -8,17 +8,69 @@ Content-Type: application/json
 }
 
 ###
+//post nueva entrada: mascota - requiere estar logeado
 POST http://localhost:8000/mascotas
 Content-Type: application/json
 Authorization: Bearer {{ login.response.body.token }}
 
 {
   "nombre": "Lola",
-    "raza": "gato",
-    "edad": 11,
-    "tamaño": "mediano",
-    "zona": "Flores",
-    "especial": false,
-    "sexo": "F",
-    "compatibilidad": "ninguno"
+  "raza": "gato",
+  "edad": 11,
+  "tamaño": "mediano",
+  "zona": "Flores",
+  "especial": false,
+  "sexo": "F",
+  "compatibilidad": "ninguno"
+}
+
+###
+//post nueva entrada: usuario-refugio - requiere estar logeado
+POST http://localhost:8000/usuarios-refugios
+Content-Type: application/json
+Authorization: Bearer {{ login.response.body.token }}
+
+{
+  "nombre": "Maria",
+  "apellido": "Perez",
+  "refugio": "El Campito",
+  "provincia": "Córdoba",
+  "localidad": "Córdoba",
+  "mail": "mariaperez@gmail.com",
+  "telefono": 65653346,
+  "puntuacion": 8
+}
+
+
+###
+//modificar una entrada de mascota
+PUT http://localhost:8000/mascotas/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "nombre": "Morgan",
+  "raza": "perro",
+  "edad": 8,
+  "tamaño": "mediano",
+  "zona": "Devoto",
+  "especial": false,
+  "sexo": "M",
+  "compatibilidad": "perro, gato"
+}
+
+###
+//modificar una entrada de usuario-refugio
+PUT http://localhost:8000/usuarios-refugios/1
+Content-Type: application/json
+
+{
+  "nombre": "Mariana",
+  "apellido": "Alvarez",
+  "refugio": "Patitas",
+  "provincia": "Córdoba",
+  "localidad": "Córdoba",
+  "mail": "marianaalvarez@gmail.com",
+  "telefono": 65653346,
+  "puntuacion": 8
 }

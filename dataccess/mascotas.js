@@ -65,14 +65,16 @@ const estado = (id) => {
     return false
 }
 
-const modificar = (id) => {
+
+const modificar = (id, req) => {
     const index = Mascotas.findIndex((registro) => registro.id == id);
     if (index >= 0) {
         Mascotas[index] = req.body;
-        return true
+        return true;
     }
-    return false
+    return false;
 }
+
 
 const borrar = (id) => {
     const index = Mascotas.findIndex((registro) => registro.id == id);
@@ -82,5 +84,6 @@ const borrar = (id) => {
     }
     return false;
 }
+
 
 module.exports = { getAll, estado, modificar, save, getOne, borrar };

@@ -10,7 +10,7 @@ let Refugios = [{
         puntuacion: 8
     },
     {
-        id: 1,
+        id: 2,
         nombre: "Mario",
         apellido: "Perez",
         refugio: "Patitas",
@@ -44,7 +44,7 @@ const estado = (id) => {
     return false
 }
 
-const modificar = (id) => {
+const modificar = (id, req) => {
     const index = Refugios.findIndex((registro) => registro.id == id);
     if (index >= 0) {
         Refugios[index] = req.body;
