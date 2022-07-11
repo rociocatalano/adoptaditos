@@ -12,7 +12,7 @@ Content-Type: application/json
 GET http://localhost:8000/mascotas?compatibilidad=perro
 
 ###
-//obtener una mascota según su tamaño con medino (filtro)
+//obtener una mascota según su tamaño con mediano (filtro)
 GET http://localhost:8000/mascotas?tamaño=mediano
 
 ###

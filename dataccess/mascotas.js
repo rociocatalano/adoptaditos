@@ -18,7 +18,7 @@ let Mascotas = [{
         zona: "Paternal",
         especial: false,
         sexo: "F",
-        compatibilidad: "gato, perro"
+        compatibilidad: "gato" + "perro"
     },
     {
         id: 3,

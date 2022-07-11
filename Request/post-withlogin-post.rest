@@ -41,6 +41,23 @@ Authorization: Bearer {{ login.response.body.token }}
   "puntuacion": 8
 }
 
+###
+//post nueva entrada: usuario-adoptante - requiere estar logeado
+POST http://localhost:8000/usuarios-adoptantes
+Content-Type: application/json
+Authorization: Bearer {{ login.response.body.token }}
+
+{
+  "nombre": "Julia",
+  "apellido": "Blanco",
+  "provincia": "Córdoba",
+  "localidad": "La Cumbre",
+  "mail": "juliablanco@gmail.com",
+  "telefono": 54654212,
+  "puntuacion": 8,
+  "publicacionesGuardadas": []
+}
+
 
 ###
 //modificar una entrada de mascota
@@ -73,4 +90,20 @@ Content-Type: application/json
   "mail": "marianaalvarez@gmail.com",
   "telefono": 65653346,
   "puntuacion": 8
+}
+
+###
+//modificar una entrada de usuario-adoptante
+PUT http://localhost:8000/usuarios-refugios/1
+Content-Type: application/json
+
+{
+  "nombre": "Gabriel",
+  "apellido": "Alvarez",
+  "provincia": "Córdoba",
+  "localidad": "Córdoba",
+  "mail": "gabrielalvarez@gmail.com",
+  "telefono": 65653346,
+  "puntuacion": 8,
+  "publicacionesGuardadas": []
 }

@@ -8,7 +8,7 @@ GET http://localhost:8000/usuarios-adoptantes/1
 Content-Type: application/json
 
 ###
-//obtener un adoptante según su provincia
+//obtener un adoptante según su provincia (filtro)
 GET http://localhost:8000/usuarios-adoptantes?provincia=Córdoba
 
 ###
