@@ -12,5 +12,17 @@ Content-Type: application/json
 GET http://localhost:8000/mascotas?compatibilidad=perro
 
 ###
+//obtener una mascota según su tamaño con medino (filtro)
+GET http://localhost:8000/mascotas?tamaño=mediano
+
+###
+//obtener una mascota según su raza con gato (filtro)
+GET http://localhost:8000/mascotas?raza=gato
+
+###
+//obtener una mascota según su tamaño y sexo con mediano y F (filtro)
+GET http://localhost:8000/mascotas?tamaño=mediano&sexo=M
+
+###
 //borra 1 elemento mascota según id
 DELETE http://localhost:8000/mascotas/2
