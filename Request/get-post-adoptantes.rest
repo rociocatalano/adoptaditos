@@ -1,0 +1,16 @@
+//muestra todos los usuarios adoptantes
+GET http://localhost:8000/usuarios-adoptantes
+Content-Type: application/json
+
+### 
+//muestra una entrada de usuario-adoptante según id
+GET http://localhost:8000/usuarios-adoptantes/1
+Content-Type: application/json
+
+###
+//obtener un adoptante según su provincia
+GET http://localhost:8000/usuarios-adoptantes?provincia=Córdoba
+
+###
+//borra 1 elemento usuario-adoptante según id
+DELETE http://localhost:8000/usuarios-adoptantas/2

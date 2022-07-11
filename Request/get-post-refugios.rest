@@ -1,0 +1,16 @@
+//muestra todos los usuarios de refugios
+GET http://localhost:8000/usuarios-refugios
+Content-Type: application/json
+
+###
+//muestra una entrada de usuario-refugio según id
+GET http://localhost:8000/usuarios-refugios/1
+Content-Type: application/json
+
+###
+//obtener un usuario según su provincia
+GET http://localhost:8000/usuarios-refugios?provincia=Córdoba
+
+###
+//borra 1 elemento usuario-refugio según id
+DELETE http://localhost:8000/usuarios-refugios/2

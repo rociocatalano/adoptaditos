@@ -1,0 +1,16 @@
+//muestra todas las entradas de mascotas
+GET http://localhost:8000/mascotas
+Content-Type: application/json
+
+### 
+//muestra una entrada de mascota según id
+GET http://localhost:8000/mascotas/1
+Content-Type: application/json
+
+###
+//obtener una mascota según su compatibilidad con perros (filtro)
+GET http://localhost:8000/mascotas?compatibilidad=perro
+
+###
+//borra 1 elemento mascota según id
+DELETE http://localhost:8000/mascotas/2
