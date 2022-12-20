@@ -4,12 +4,12 @@ const { sequelize } = require('../utils/db')
 class Mascotas extends Model {}
 
 Mascotas.init({
-    id_mascota: {
+    id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
     },
-    tipo: {
+    nombre: {
         type: DataTypes.STRING(200),
         allowNull: false
     },
@@ -17,10 +17,30 @@ Mascotas.init({
         type: DataTypes.STRING(200),
         allowNull: false
     },
-    peso: {
+    edad: {
         type: DataTypes.INTEGER(200),
         allowNull: false
-    }
+    },
+    tamanio: {
+        type: DataTypes.STRING(200),
+        allowNull: false
+    },
+    zona: {
+        type: DataTypes.STRING(200),
+        allowNull: false
+    },
+    especial: {
+        type: DataTypes.BOOLEAN(),
+        allowNull: false
+    },
+    sexo: {
+        type: DataTypes.STRING(2),
+        allowNull: false
+    },
+    compatibilidad: {
+        type: DataTypes.STRING(200),
+        allowNull: false
+    },
 }, {
     sequelize,
     underscored: true,
