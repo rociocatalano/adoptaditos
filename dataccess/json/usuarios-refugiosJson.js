@@ -1,3 +1,4 @@
+const { v4: uuidv4 } = require("uuid");
 let Refugios = [{
         id: 1,
         nombre: "Ana",
@@ -33,7 +34,11 @@ const getAll = (filter) => {
 }
 const getOne = (id) => { return Refugios.find((registro) => registro.id == id); }
 
-const save = (body) => { Refugios.push(body); }
+const save = (body) => { 
+    const data = {id: uuidv4(), ...body};
+    Comments.push(data);
+    return data;
+}
 
 const estado = (id) => {
     const index = Refugios.findIndex((registro) => registro.id == id);

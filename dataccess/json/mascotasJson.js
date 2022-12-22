@@ -1,3 +1,4 @@
+const { v4: uuidv4 } = require("uuid"); 
 let Mascotas = [{
         id: 1,
         nombre: "juan",
@@ -75,7 +76,11 @@ const getAll = (filter) => {
 }
 const getOne = (id) => { return Mascotas.find((registro) => registro.id == id); }
 
-const save = (body) => { Mascotas.push(body); }
+const save = (body) => { 
+    const data = {id: uuidv4(), ...body};
+    Comments.push(data);
+    return data;
+}
 
 const estado = (id) => {
     const index = Mascotas.findIndex((registro) => registro.id == id);
