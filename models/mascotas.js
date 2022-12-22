@@ -43,6 +43,7 @@ Mascotas.init({
     },
 }, {
     sequelize,
+    timestamps: false,
     underscored: true,
     modelName: 'Mascotas'
 })

@@ -44,8 +44,9 @@ let Mascotas = [{
     }
 ];
 
-const getAll = (filter) => {
-    let filtrado = Mascotas;
+const getAll = async (filter) => {
+    let mascotas = require("../models/Mascotas");
+    let filtrado = await mascotas.findAll();
 
     if (filter.compatibilidad) {
         filtrado = filtrado.filter(e => e.compatibilidad === filter.compatibilidad);
