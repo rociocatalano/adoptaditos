@@ -1,4 +1,4 @@
-const { UsuariosRefugios } = require('../models/')
+const { UsuariosRefugios } = require('../models')
 
 const getAll = async (filter) => {
     const datos = await UsuariosRefugios.findAll()

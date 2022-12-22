@@ -1,6 +1,6 @@
 const Mascotas = require("./mascotas")
 const UsuariosAdoptantes = require("./usuarios-adoptantes")
-const UsuariosAdoptantes = require("./usuarios-refugios")
+const UsuariosRefugios = require("./usuarios-refugios")
 
 //pensar esta parte
 Mascotas.belongsTo(UsuariosRefugios)
@@ -12,5 +12,5 @@ UsuariosAdoptantes.hasMany(Mascotas)
 module.exports = {
     Mascotas,
     UsuariosAdoptantes,
-    UsuariosAdoptantes
+    UsuariosRefugios
 }

@@ -1,23 +1,22 @@
 const { Mascotas } = require('../models/')
 
 const getAll = async (filter) => {
-
     const datos = await Mascotas.findAll(filter, { attributes : { exclude: ['createdAt','updatedAt'] }})
     return datos
 };
 
-const getOne = async (id) => { return await Mascotas.findByPk(id, {
+const getOne = async(id) => { return await Mascotas.findByPk(id, {
     attributes: {exclude:['created_at', 'updated_at']}
   });}
 
 const save = (body) => {
     const data = {...body };
-    const Mascotas =  Mascotas.create(data);
-    return Mascotas;
+    const mascotas =  Mascotas.create(data);
+    return mascotas;
 }
 
 const borrar = (id) => {
-     Mascotas.destroy({
+    Mascotas.destroy({
         where: {
             id
         }
