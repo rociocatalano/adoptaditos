@@ -14,14 +14,14 @@ Content-Type: application/json
 Authorization: Bearer {{ login.response.body.token }}
 
 {
-  "nombre": "ona",
-  "raza": "perro",
-  "edad": 5,
-  "tamanio": "mediano",
-  "zona": "Villa del Parque",
+  "nombre": "Maki",
+  "raza": "gato",
+  "edad": 1,
+  "tamanio": "chico",
+  "zona": "Flores",
   "especial": false,
   "sexo": "F",
-  "compatibilidad": "ninguno"
+  "compatibilidad": "gato"
 }
 
 ###
@@ -48,31 +48,33 @@ Content-Type: application/json
 Authorization: Bearer {{ login.response.body.token }}
 
 {
-  "nombre": "Mario",
-  "apellido": "Lopez",
+  "nombre": "Juan",
+  "apellido": "Perez",
   "provincia": "Santa Fe",
   "localidad": "Rosario",
-  "mail": "mariolopez@gmail.com",
-  "telefono": 1564653,
-  "puntuacion": 7
+  "mail": "juanperez@gmail.com",
+  "telefono": 544232158,
+  "puntuacion": 9
 }
 
 
 ###
 //modificar una entrada de mascota
-PUT http://localhost:8000/mascotas/1
+PUT http://localhost:8000/mascotas/543c2857-5b5a-4e61-b016-bb9ecfdc8a23
 Content-Type: application/json
 
 {
-  "id": 1,
-  "nombre": "Morgan",
+  "nombre": "Stitch",
   "raza": "perro",
   "edad": 8,
-  "tamaño": "mediano",
+  "tamanio": "mediano",
   "zona": "Devoto",
   "especial": false,
   "sexo": "M",
-  "compatibilidad": "perro, gato"
+  "compatibilidad": "perro",
+  "usuariosRefugioId": null,
+  "usuariosAdoptanteId": null
+
 }
 
 ###

@@ -25,4 +25,4 @@ GET http://localhost:8000/mascotas?tamaño=mediano&sexo=F
 
 ###
 //borra 1 elemento mascota según id
-DELETE http://localhost:8000/mascotas/2
+DELETE http://localhost:8000/mascotas/20c23c88-8692-4349-8328-543156019a86

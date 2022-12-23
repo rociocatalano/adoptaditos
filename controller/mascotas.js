@@ -7,12 +7,12 @@ let dao = require('../dataccess/mascotas');
 
 
 /* Obtener todas las mascotas */
-router.get("/", async (req, res) => {
+router.get("/", async(req, res) => {
     res.status(200).json(await dao.getAll(req.query));
 });
 
 /* Obtener una mascota especifica */
-router.get("/:id",  async (req, res) => {
+router.get("/:id", async(req, res) => {
     const id = req.params.id;
     //const data = Mascotas.find((mascota) => mascota.id == id);
     const data = await dao.getOne(id);
@@ -34,7 +34,7 @@ router.post("/", (req, res) => {
 
 
 //agregar un elemento (POST) con usuario logueado
-router.post("/", middleware.validarUserLogin, async (req, res) => {
+router.post("/", middleware.validarUserLogin, async(req, res) => {
 
     const body = {...req.body, id: uuidv4(), user: req.user };
     const data = await dao.save(body);
@@ -44,7 +44,7 @@ router.post("/", middleware.validarUserLogin, async (req, res) => {
 
 /* Borrar una mascota sin usuario logeado*/
 
-router.delete("/:id", async (req, res) => {
+router.delete("/:id", async(req, res) => {
     const id = req.params.id;
     //const index = Mascotas.findIndex((mascotas) => mascotas.id == id);
     await dao.borrar(id)
@@ -55,10 +55,10 @@ router.delete("/:id", async (req, res) => {
 
 /* Modificar una mascota */
 
-router.put("/:id", async (req, res) => {
+router.put("/:id", async(req, res) => {
     const id = req.params.id;
     //const index = Mascotas.findIndex((mascotas) => mascotas.id == id);
-    if (await dao.modificar(id, req)) {
+    if (await dao.modificar(id, req.body)) {
         res.sendStatus(202);
     } else {
         res.sendStatus(404);
