@@ -35,9 +35,6 @@ const getOne = async(id) => {
     });
 }
 
-
-
-
 const save = (body) => {
     const data = {...body };
     const mascotas = Mascotas.create(data);
@@ -66,4 +63,4 @@ const borrar = (id) => {
     })
 }
 
-module.exports = { getAll, getOne, save, borrar, update, modificar };
+module.exports = { getAll, getOne, save, borrar, modificar };
