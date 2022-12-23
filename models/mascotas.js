@@ -5,7 +5,7 @@ class Mascotas extends Model {}
 
 Mascotas.init({
     id: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         primaryKey: true,
         autoIncrement: true
     },

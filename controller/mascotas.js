@@ -8,7 +8,7 @@ let dao = require('../dataccess/mascotas');
 
 /* Obtener todas las mascotas */
 router.get("/", async (req, res) => {
-    res.status(200).json( await dao.getAll(req.query));
+    res.status(200).json( await dao.getAll(req.query));  
 });
 
 /* Obtener una mascota especifica */

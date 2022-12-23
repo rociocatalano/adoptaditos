@@ -3,9 +3,9 @@ const { sequelize } = require('../utils/db')
 
 class UsuariosRefugios extends Model {}
 
-UsuariosAdoptantes.init({
+UsuariosRefugios.init({
     id: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         primaryKey: true,
         autoIncrement: true
     },

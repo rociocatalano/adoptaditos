@@ -1,5 +1,5 @@
 //post nueva entrada: mascota
-POST http://localhost:8000/mascotas
+POST http://localhost:3306/adoptaditos/mascotas
 Content-Type: application/json 
 
 {
