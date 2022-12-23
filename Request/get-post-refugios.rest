@@ -7,9 +7,6 @@ Content-Type: application/json
 GET http://localhost:8000/usuarios-refugios/d8130110-afde-4ffd-96dd-17c9963e37e3
 Content-Type: application/json
 
-###
-//obtener un usuario según su provincia
-GET http://localhost:8000/usuarios-refugios?provincia=Córdoba
 
 ###
 //borra 1 elemento usuario-refugio según id

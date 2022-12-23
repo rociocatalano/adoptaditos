@@ -7,9 +7,6 @@ Content-Type: application/json
 GET http://localhost:8000/usuarios-adoptantes/3271865c-c600-417a-a148-43f04c3444e3
 Content-Type: application/json
 
-###
-//obtener un adoptante según su provincia (filtro)
-GET http://localhost:8000/usuarios-adoptantes?provincia=Córdoba
 
 ###
 //borra 1 elemento usuario-adoptante según id

@@ -1,30 +1,6 @@
 const { Mascotas } = require('../models/')
 
 const getAll = async(filter) => {
-    /*let options = {
-        attributes: ['nombre', 'raza', 'edad', 'tamanio', 'zona', 'especial', 'sexo', 'compatibilidad'], // select 
-        include: [
-            { model: Mascotas, required: false }
-        ]
-    }
-    if (filter.tamanio)
-        options = {
-            ...options,
-            where: {
-                ...options.where,
-                tamanio: filter.tamanio
-            }
-        }
-
-    if (filter.compatibilidad)
-        options = {
-            ...options,
-            where: {
-                ...options.where,
-                compatibilidad: filter.compatibilidad
-            }
-        }*/
-
     const datos = await Mascotas.findAll(filter, { attributes: { exclude: ['createdAt', 'updatedAt'] } })
     return datos
 };

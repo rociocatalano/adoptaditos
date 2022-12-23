@@ -8,6 +8,25 @@ GET http://localhost:8000/mascotas/543c2857-5b5a-4e61-b016-bb9ecfdc8a23
 Content-Type: application/json
 
 ###
+//borra 1 elemento mascota según id
+DELETE http://localhost:8000/mascotas/20c23c88-8692-4349-8328-543156019a86
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###
 //obtener una mascota según su compatibilidad con perros (filtro)
 GET http://localhost:8000/mascotas?compatibilidad=perro
 
@@ -22,7 +41,3 @@ GET http://localhost:8000/mascotas?raza=gato
 ###
 //obtener una mascota según su tamaño y sexo con mediano y F (filtro)
 GET http://localhost:8000/mascotas?tamaño=mediano&sexo=F
-
-###
-//borra 1 elemento mascota según id
-DELETE http://localhost:8000/mascotas/20c23c88-8692-4349-8328-543156019a86
