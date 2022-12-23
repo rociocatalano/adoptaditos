@@ -52,7 +52,7 @@ router.delete("/:id", async(req, res) => {
 
 router.put("/:id", async(req, res) => {
     const id = req.params.id;
-    if (await dao.modificar(id, req)) {
+    if (await dao.update(id, req.body)) {
         res.sendStatus(202);
     } else {
         res.sendStatus(404);

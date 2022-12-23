@@ -79,7 +79,7 @@ Content-Type: application/json
 
 ###
 //modificar una entrada de usuario-refugio
-PUT http://localhost:8000/usuarios-refugios/1
+PUT http://localhost:8000/usuarios-refugios/2051bf41-345f-4892-a2f0-65c280ce2b7a
 Content-Type: application/json
 
 {
@@ -95,7 +95,7 @@ Content-Type: application/json
 
 ###
 //modificar una entrada de usuario-adoptante
-PUT http://localhost:8000/usuarios-refugios/1
+PUT http://localhost:8000/usuarios-adoptantes/54c7b964-9316-40e6-b6a5-e9c876394cc9
 Content-Type: application/json
 
 {
@@ -105,6 +105,5 @@ Content-Type: application/json
   "localidad": "Córdoba",
   "mail": "gabrielalvarez@gmail.com",
   "telefono": 65653346,
-  "puntuacion": 8,
-  "publicacionesGuardadas": []
+  "puntuacion": 8
 }

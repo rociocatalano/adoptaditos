@@ -6,12 +6,12 @@ let dao = require('../dataccess/usuarios-refugios');
 
 
 /* Obtener todos los refugios */
-router.get("/", async (req, res) => {
+router.get("/", async(req, res) => {
     res.status(200).json(await dao.getAll(req.query));
 });
 
 /* Obtener un refugio especifico */
-router.get("/:id", async (req, res) => {
+router.get("/:id", async(req, res) => {
     const id = req.params.id;
     const data = await dao.getOne(id);
 
@@ -32,7 +32,7 @@ router.post("/", (req, res) => {
 
 
 //agregar un elemento - nuevo refugio (POST) con usuario logueado
-router.post("/", middleware.validarUserLogin, async (req, res) => {
+router.post("/", middleware.validarUserLogin, async(req, res) => {
 
     const body = {...req.body, id: uuidv4(), user: req.user };
     const data = await dao.save(body);
@@ -42,17 +42,17 @@ router.post("/", middleware.validarUserLogin, async (req, res) => {
 
 /* Borrar un usuario refugio */
 
-router.delete("/:id", async (req, res) => {
+router.delete("/:id", async(req, res) => {
     const id = req.params.id;
-    await dao.borrar(id) 
+    await dao.borrar(id)
     res.sendStatus(202);
 });
 
 /* Modificar un refugio */
 
-router.put("/:id", async (req, res) => {
+router.put("/:id", async(req, res) => {
     const id = req.params.id;
-    if (await dao.modificar(id, req)) {
+    if (await dao.update(id, req.body)) {
         res.sendStatus(202);
     } else {
         res.sendStatus(404);
