@@ -4,7 +4,7 @@ Content-Type: application/json
 
 ### 
 //muestra una entrada de usuario-adoptante según id
-GET http://localhost:8000/usuarios-adoptantes/1
+GET http://localhost:8000/usuarios-adoptantes/3271865c-c600-417a-a148-43f04c3444e3
 Content-Type: application/json
 
 ###
@@ -13,4 +13,4 @@ GET http://localhost:8000/usuarios-adoptantes?provincia=Córdoba
 
 ###
 //borra 1 elemento usuario-adoptante según id
-DELETE http://localhost:8000/usuarios-adoptantas/2
+DELETE http://localhost:8000/usuarios-adoptantes/ecc5f773-550c-484e-985e-674269443e51

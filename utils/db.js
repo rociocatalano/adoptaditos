@@ -4,7 +4,7 @@ const Sequelize = require('sequelize')
 const sequelize = new Sequelize(
     "adoptaditos", //nombre de la base de datos
     "root", //usuario de la base de datos
-    "******", //contraseña de la base de datos
+    "*****", //contraseña de la base de datos
     {
         host: "localhost",
         port: "3306",

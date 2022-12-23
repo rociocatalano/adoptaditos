@@ -4,7 +4,7 @@ Content-Type: application/json
 
 ###
 //muestra una entrada de usuario-refugio según id
-GET http://localhost:8000/usuarios-refugios/1
+GET http://localhost:8000/usuarios-refugios/d8130110-afde-4ffd-96dd-17c9963e37e3
 Content-Type: application/json
 
 ###
@@ -13,7 +13,7 @@ GET http://localhost:8000/usuarios-refugios?provincia=Córdoba
 
 ###
 //borra 1 elemento usuario-refugio según id
-DELETE http://localhost:8000/usuarios-refugios/2
+DELETE http://localhost:8000/usuarios-refugios/f2f23e60-238d-4671-8b27-228697671680
 
 ###
 POST http://localhost:8000/usuarios_refugios 
