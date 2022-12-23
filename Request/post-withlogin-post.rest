@@ -14,11 +14,11 @@ Content-Type: application/json
 Authorization: Bearer {{ login.response.body.token }}
 
 {
-  "nombre": "Lola",
-  "raza": "gato",
-  "edad": 11,
+  "nombre": "ona",
+  "raza": "perro",
+  "edad": 5,
   "tamanio": "mediano",
-  "zona": "Flores",
+  "zona": "Villa del Parque",
   "especial": false,
   "sexo": "F",
   "compatibilidad": "ninguno"

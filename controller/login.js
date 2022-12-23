@@ -13,10 +13,10 @@ router.post('/', (req,res)=>{
     }
 
     const token = jwt.sign(tokenData,process.env.JWTSECRET,{ expiresIn: '1h' })
-    res.status(200).send({token, name: 'regugio villa pueyrredon'})
+    res.status(200).send({token, name: 'refugio michilini'})
   }else{
     //usuario incorrecto
-    return res.status(401).json({error:'credenciales incorrecto'})
+    return res.status(401).json({error:'credenciales incorrectas'})
   }
 })
 

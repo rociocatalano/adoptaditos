@@ -21,7 +21,7 @@ GET http://localhost:8000/mascotas?raza=gato
 
 ###
 //obtener una mascota según su tamaño y sexo con mediano y F (filtro)
-GET http://localhost:8000/mascotas?tamaño=mediano&sexo=M
+GET http://localhost:8000/mascotas?tamaño=mediano&sexo=F
 
 ###
 //borra 1 elemento mascota según id

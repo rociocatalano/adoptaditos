@@ -5,7 +5,7 @@ class UsuariosRefugios extends Model {}
 
 UsuariosRefugios.init({
     id: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
     },
@@ -44,7 +44,7 @@ UsuariosRefugios.init({
 }, {
     sequelize,
     underscored: true,
-    modelName: 'usuarios-refugios'
+    modelName: 'usuarios_refugios'
 })
 
 module.exports = UsuariosRefugios

@@ -14,3 +14,18 @@ GET http://localhost:8000/usuarios-refugios?provincia=Córdoba
 ###
 //borra 1 elemento usuario-refugio según id
 DELETE http://localhost:8000/usuarios-refugios/2
+
+###
+POST http://localhost:8000/usuarios_refugios 
+Content-Type: application/json
+
+{   
+    "nombre": "Ana",
+    "apellido": "Lopez",
+    "refugio": "El Campito",
+    "provincia": "Buenos Aires",
+    "localidad": "-",
+    "mail": "analopez@gmail.com",
+    "telefono": 46545631,
+    "puntuacion": 8 
+}

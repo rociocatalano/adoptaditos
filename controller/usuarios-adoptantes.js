@@ -6,14 +6,14 @@ let dao = require('../dataccess/usuarios-adoptantes');
 
 
 /* Obtener todos los adoptantes */
-router.get("/", (req, res) => {
-    res.status(200).json(dao.getAll(req.query));
+router.get("/", async (req, res) => {
+    res.status(200).json(await dao.getAll(req.query));
 });
 
 /* Obtener un adoptante especifico */
-router.get("/:id", (req, res) => {
+router.get("/:id", async (req, res) => {
     const id = req.params.id;
-    const data = dao.getOne(id);
+    const data = await dao.getOne(id);
 
     if (data) {
         res.status(200).json(data);
@@ -32,31 +32,27 @@ router.post("/", (req, res) => {
 
 
 //agregar un elemento - nuevo adoptante (POST) con usuario logueado
-router.post("/", middleware.validarUserLogin, (req, res) => {
+router.post("/", middleware.validarUserLogin, async (req, res) => {
 
     const body = {...req.body, id: uuidv4(), user: req.user };
-    dao.save(body);
-    res.status(200).json(body);
+    const data = await dao.save(body);
+    res.status(200).json(data);
 });
 
 
 /* Borrar un usuario adoptante */
 
-router.delete("/:id", (req, res) => {
+router.delete("/:id", async (req, res) => {
     const id = req.params.id;
-
-    if (dao.borrar(id)) {
-        res.sendStatus(202);
-    } else {
-        res.sendStatus(404);
-    }
+    await dao.borrar(id) 
+    res.sendStatus(202);
 });
 
 /* Modificar un adoptante */
 
-router.put("/:id", (req, res) => {
+router.put("/:id", async (req, res) => {
     const id = req.params.id;
-    if (dao.modificar(id, req)) {
+    if (await dao.modificar(id, req)) {
         res.sendStatus(202);
     } else {
         res.sendStatus(404);
