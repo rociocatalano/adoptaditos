@@ -3,14 +3,16 @@ POST http://localhost:3306/adoptaditos/mascotas
 Content-Type: application/json 
 
 {
-    "nombre": "Lola",
-    "raza": "gato",
-    "edad": 11,
-    "tamaño": "mediano",
-    "zona": "Flores",
-    "especial": true,
-    "sexo": "F",
-    "compatibilidad": "ninguno"
+    "nombre": "Pepe",
+    "raza": "perro",
+    "edad": 5,
+    "tamanio": "grande",
+    "zona": "Barracas",
+    "especial": false,
+    "sexo": "M",
+    "compatibilidad": "perro",
+    "usuariosRefugioId": null,
+    "usuariosAdoptanteId": null
 }
 
 ###

@@ -4,7 +4,7 @@ Content-Type: application/json
 
 ### 
 //muestra una entrada de mascota según id
-GET http://localhost:8000/mascotas/1
+GET http://localhost:8000/mascotas/543c2857-5b5a-4e61-b016-bb9ecfdc8a23
 Content-Type: application/json
 
 ###

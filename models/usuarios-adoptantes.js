@@ -40,7 +40,7 @@ UsuariosAdoptantes.init({
 }, {
     sequelize,
     underscored: true,
-    modelName: 'usuarios-adoptantes'
+    modelName: 'usuarios_adoptantes'
 })
 
 module.exports = UsuariosAdoptantes

@@ -31,14 +31,14 @@ Content-Type: application/json
 Authorization: Bearer {{ login.response.body.token }}
 
 {
-  "nombre": "Maria",
-  "apellido": "Perez",
-  "refugio": "El Campito",
-  "provincia": "Córdoba",
-  "localidad": "Córdoba",
-  "mail": "mariaperez@gmail.com",
-  "telefono": 65653346,
-  "puntuacion": 8
+  "nombre": "Ana",
+  "apellido": "Gomez",
+  "refugio": "Patitas",
+  "provincia": "CABA",
+  "localidad": "CABA",
+  "mail": "anagomez@gmail.com",
+  "telefono": 4545546,
+  "puntuacion": 7
 }
 
 ###
@@ -48,14 +48,13 @@ Content-Type: application/json
 Authorization: Bearer {{ login.response.body.token }}
 
 {
-  "nombre": "Julia",
-  "apellido": "Blanco",
-  "provincia": "Córdoba",
-  "localidad": "La Cumbre",
-  "mail": "juliablanco@gmail.com",
-  "telefono": 54654212,
-  "puntuacion": 8,
-  "publicacionesGuardadas": []
+  "nombre": "Mario",
+  "apellido": "Lopez",
+  "provincia": "Santa Fe",
+  "localidad": "Rosario",
+  "mail": "mariolopez@gmail.com",
+  "telefono": 1564653,
+  "puntuacion": 7
 }
 
 
